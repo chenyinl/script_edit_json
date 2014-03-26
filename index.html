@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Script Builder</title>
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script>
+  var Texts="abc";
+  </script>
+  <script src="./Texts.js"></script>
+  <script src="./scriptBuilder.js"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <div id="table_div">
+  <h1>Script Builder</h1>
+  <table>
+    <tr>
+      <td>Category</td>
+      <td>
+        <span id="category_text">
+        </span>
+       <select id="category" onchange="scriptBuilder.updateNameSelection();">
+            <option value="generic">Generic</option>
+            <option value="personal">Personal</option>
+            <option value="group">Group</option>
+            <option value="firstTimeVisitor">First Time Visitor</option>
+            <option value="birthday">Birthday</option>
+            <option value="weddingoccasion">Wedding Occasion</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>
+        <input id="newName" name="name"><span id="name" ></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Text</td>
+      <td>
+        <input 
+            id = "script" size = "35" 
+            onkeyup = "scriptBuilder.showRemainTextLength(); scriptBuilder.showDelay();" 
+            onfocus = "scriptBuilder.showRemainTextLength(); scriptBuilder.showDelay();"
+        >&nbsp;
+        <span id="remainCount"></span> remains.
+ 
+      </td>
+    </tr>
+    <tr>
+      <td>Dealy</td>
+      <td><input id = "delay" size = "3" value = "1.5"> second(s).</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button 
+            id="new_button"    
+            onclick="scriptBuilder.addNode();return false;"
+        >Add New</button>
+        <button 
+            id="edit_button"   
+            onclick="scriptBuilder.editNode();return false;"
+        >Save Edit</button>
+        <button 
+            id="delete_button" 
+            onclick="scriptBuilder.deleteNode();return false;"
+        >Delete</button>
+        <button 
+            id="update_name_button"
+            onclick="scriptBuilder.updateName();return false;"
+        >Update Name</button>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><span id="messageBox"></span></td>
+    </tr>
+</table>
+</div>
+<div id="show_div">
+</div>
+<div id="json_div">
+</div>
+<div id="switch_div">
+  <button id="list_button" 
+      onclick="scriptBuilder.showListView();return false;"
+  >List View</button>
+  <button id="JSON_button" 
+      onclick="scriptBuilder.showJSONView();return false;" 
+      class="inactive"
+  >JSON View</button>
+  <button id="copy_button" 
+      onclick="scriptBuilder.download();return false;"
+      class="active"
+  >Download JSON</button>
+</div>
+</body>
+</html>
