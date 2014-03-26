@@ -1,0 +1,129 @@
+body{
+    font-family:'Lucida Grande';
+}
+div#json_div{
+    border:2px solid #a1a1a1;
+    padding:10px 40px; 
+    background:Azure;
+    width:400px;
+    border-radius:25px;
+    position: absolute;
+    left:520px;
+    top:20px;
+    display: none;
+}
+ div#show_div{
+    border:2px solid #a1a1a1;
+    padding:10px 40px; 
+    background:WhiteSmoke;
+    width:400px;
+    border-radius:25px;
+    position: absolute;
+    left:520px;
+    top:20px;
+    display: block;
+}
+div#switch_div{
+    position: absolute;
+    left:600px;
+    top:5px;
+}
+select{
+    font-size: 16px;
+       border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 5px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 0px 0;
+}
+input[type=text]:enabled,
+input:not([type=submit]):not([type=file]){
+    font-size: 16px;
+       border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 0px;
+    /*background: rgba(255,255,255,0.5);*/
+    margin: 0 0 0px 0;
+}
+input#script:disabled, input#delay:disabled{
+    background: LightGray !important;
+}
+button{
+    font-size: 16px;
+       border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 5px;
+    background: PapayaWhip;
+    margin: 0 0 10px 0;
+    cursor: pointer
+}
+button.inactive{
+    background: #FFF9EE !important; /* 1 pier lighter of PapayaWhip */
+    color: #999999; /* fade of black */
+}
+button.active{
+    background: PapayaWhip;
+    cursor: pointer
+}
+/* when text are selected */
+.highlighted{
+    background: LavenderBlush;
+}
+.selectable{
+    cursor: pointer
+}
+/* use table row hight so form won't move when changes */
+table tr { 
+    line-height: 42px; 
+}
+#category_text, #newName, #name{
+    font-size: 16px;
+    font-family:'Lucida Grande';
+}
+span#remainCount.safe{
+    color: Blue !important;
+}
+span#remainCount.warning{
+    color: Red !important;
+}
+.warning{
+    color: Red;
+}
+.safe, .add{
+    color: Blue;
+}
+/* fade out message text */
+.oldMessage {
+    color:LightGray;
+}
+/* default at loading only */
+#name{
+    display:none;
+}
+span.category_text{
+    font-weight:bold;
+}
